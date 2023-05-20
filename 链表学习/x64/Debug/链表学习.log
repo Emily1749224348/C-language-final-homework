@@ -1,0 +1,6 @@
+﻿  源.c
+D:\Emily is coding\VS2022\高阶玩法\链表学习\源.c(12,11): warning C4047: “=”:“Node *”与“int”的间接级别不同
+D:\Emily is coding\VS2022\高阶玩法\链表学习\源.c(57,14): warning C4047: “=”:“Node *”与“int”的间接级别不同
+D:\Emily is coding\VS2022\高阶玩法\链表学习\源.c(106,14): warning C4047: “=”:“Node *”与“int”的间接级别不同
+D:\Emily is coding\VS2022\高阶玩法\链表学习\源.c(151,10): warning C4047: “=”:“Node *”与“int”的间接级别不同
+  链表学习.vcxproj -> D:\Emily is coding\VS2022\高阶玩法\链表学习\x64\Debug\链表学习.exe
