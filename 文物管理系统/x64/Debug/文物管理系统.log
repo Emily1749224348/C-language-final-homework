@@ -1,0 +1,24 @@
+﻿  源.cpp
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(58,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(58,17): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(61,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(61,17): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(64,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(64,17): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(67,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(67,17): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(95,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(95,17): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(109,21): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(109,21): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(112,21): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(112,21): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(115,21): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(115,21): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(118,21): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(118,21): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(138,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(138,17): message : 此参数用作缓冲区大小
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(180,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\relics.h(180,17): message : 此参数用作缓冲区大小
+  文物管理系统.vcxproj -> C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\x64\Debug\文物管理系统.exe
