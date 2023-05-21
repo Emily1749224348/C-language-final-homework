@@ -1,9 +1,9 @@
-#pragma once
+ï»¿#pragma once
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
 
-struct Relic {   //Ã¿¸öÎÄÎï¶ÔÓ¦Ò»¸ö½á¹¹Ìå 
+struct Relic {   //æ¯ä¸ªæ–‡ç‰©å¯¹åº”ä¸€ä¸ªç»“æ„ä½“ 
 
     char Name[100];
     char Museum[100];
@@ -12,7 +12,8 @@ struct Relic {   //Ã¿¸öÎÄÎï¶ÔÓ¦Ò»¸ö½á¹¹Ìå
 }Relics[10000];
 
 
-int num = 0; //¼ÆÊıÆ÷
+int num; //è®¡æ•°å™¨
+
 
 void Copy(struct Relic* arr, int i, int j)
 {
@@ -24,60 +25,69 @@ void Copy(struct Relic* arr, int i, int j)
   
 
 
-int Reclic_SearchByName(char name[])//Í¨¹ıĞÕÃûÀ´¼ìË÷ÎÄÎï
+int Reclic_SearchByName(char name[])//é€šè¿‡å§“åæ¥æ£€ç´¢æ–‡ç‰©
 {
     
     for (int i = 0; i < num; i++)
     {
-        if (strcmp(Relics[i].Name, name) == 0)  //Í¨¹ıstrcmpº¯ÊıÀ´¶Ô±ÈĞÕÃû£¬ÕÒµ½·µ»ØÔÚÊı×éµÄÎ»ÖÃ 
+        if (strcmp(Relics[i].Name, name) == 0)  //é€šè¿‡strcmpå‡½æ•°æ¥å¯¹æ¯”å§“åï¼Œæ‰¾åˆ°è¿”å›åœ¨æ•°ç»„çš„ä½ç½® 
         {
             return i;
         }
     }
-    return -1;    //Î´Â¼Èë·µ»Ø -1 
+    return -1;    //æœªå½•å…¥è¿”å› -1 
 }
 
 
 
 
-void Reclics_DisplaySingle(int index)//Êä³ö±íÍ·
+void Reclics_DisplaySingle(int index)//è¾“å‡ºè¡¨å¤´
 {
-    printf("%20s%30s%15s%30s\n","Ãû³Æ", "ÏÖ²Ø²©Îï¹İ", "Äê´ú", "¼ò½é");
-    printf("-------------------------------------------------------------\n");
-    printf("%20s%30s%15s%30s\n", Relics[index].Name, Relics[index].Museum,
+    printf("%20s%30s%15s%30s\n","åç§°", "ç°è—åšç‰©é¦†", "å¹´ä»£", "ç®€ä»‹");
+    printf("------------------------------------------------------------------------------------------------------\n");
+    printf("%19s%25s%20s%30s\n", Relics[index].Name, Relics[index].Museum,
         Relics[index].Year, Relics[index].Introduction);
 }
 
 
-void inputt()//ÀûÓÃÑ­»·Â¼ÈëĞÅÏ¢
+void inputt()//åˆ©ç”¨å¾ªç¯å½•å…¥ä¿¡æ¯
 {
     while (1)
     {
-        
-        printf("ÇëÊäÈëÃû³Æ:");
-        scanf_s("%s", Relics[num].Name,sizeof(Relics[num].Name));
+       
+        printf("è¯·è¾“å…¥åç§°:");
+        scanf_s("%s", Relics[num].Name, sizeof(Relics[num].Name));
         getchar();
-        printf("ÇëÊäÈëÏÖ²Ø²©Îï¹İ:");
+        printf("è¯·è¾“å…¥ç°è—åšç‰©é¦†:");
         scanf_s("%s", Relics[num].Museum, sizeof(Relics[num].Museum));
         getchar();
-        printf("ÇëÊäÈëÄê´ú:");
+        printf("è¯·è¾“å…¥å¹´ä»£:");
         scanf_s("%s", Relics[num].Year, sizeof(Relics[num].Year));
         getchar();
-        printf("ÇëÊäÈë¼ò½é:");
+        printf("è¯·è¾“å…¥ç®€ä»‹:");
         scanf_s("%s", Relics[num].Introduction, sizeof(Relics[num].Introduction));
         getchar();
         
         if (Reclic_SearchByName(Relics[num].Name) == -1)
         {
-            num++;  //ÒÆÏòÏÂÒ»¸öÎ»ÖÃ 
+            num++;  //ç§»å‘ä¸‹ä¸€ä¸ªä½ç½® 
         }
         else
         {
-            printf("¸ÃÎÄÎïÒÑ´æÔÚ\n");
+            printf("è¯¥æ–‡ç‰©å·²å­˜åœ¨\n");
         }
 
-        printf("ÊÇ·ñ¼ÌĞø?(y/n)");
-        if (getchar() == 'n')
+        printf("æ˜¯å¦ç»§ç»­?(y/n)");
+        char ch= getchar();
+        while (ch != 'y' && ch != 'n')
+        {
+          
+            printf("è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥(y/n):");
+            getchar();
+            ch = getchar();
+            
+        }
+        if (ch == 'n')
         {
             break;
         }
@@ -85,82 +95,100 @@ void inputt()//ÀûÓÃÑ­»·Â¼ÈëĞÅÏ¢
 }
 
 
-void modify()//ĞŞ¸ÄÎÄÎïĞÅÏ¢
+void modify()//ä¿®æ”¹æ–‡ç‰©ä¿¡æ¯
 {
     while (1)
     {
         char name[20];
         int index;
-        printf("ÇëÊäÈëÒªĞŞ¸ÄµÄÎÄÎïµÄÃû³Æ:");
+        printf("è¯·è¾“å…¥è¦ä¿®æ”¹çš„æ–‡ç‰©çš„åç§°:");
         scanf_s("%s", name, sizeof(name));
         getchar();
         index = Reclic_SearchByName(Relics[num].Name);
-        if (index == -1)//ÅĞ¶ÏÎÄÎïÊÇ·ñÂ¼ÈëÏµÍ³
+        if (index == -1)//åˆ¤æ–­æ–‡ç‰©æ˜¯å¦å½•å…¥ç³»ç»Ÿ
         {
-            printf("ÎÄÎï²»´æÔÚ!\n");
+            printf("æ–‡ç‰©ä¸å­˜åœ¨!\n");
         }
         else
         {
-            printf("ÄãÒªĞŞ¸ÄµÄÎÄÎïĞÅÏ¢Îª:\n");
+            printf("ä½ è¦ä¿®æ”¹çš„æ–‡ç‰©ä¿¡æ¯ä¸º:\n");
             Reclics_DisplaySingle(index);
 
-            printf("-- ÇëÊäÈëĞÂĞÅÏ¢--\n");
-            printf("ÇëÊäÈëÃû³Æ:");
+            printf("-- è¯·è¾“å…¥æ–°ä¿¡æ¯--\n");
+            printf("è¯·è¾“å…¥åç§°:");
             scanf_s("%s", Relics[index].Name, sizeof(Relics[num].Name));
             getchar();
-            printf("ÇëÊäÈëÏÖ´æ²©Îï¹İ:");
+            printf("è¯·è¾“å…¥ç°å­˜åšç‰©é¦†:");
             scanf_s("%s", Relics[index].Museum, sizeof(Relics[num].Museum));
             getchar();
-            printf("ÇëÊäÈëÄê´ú:");
+            printf("è¯·è¾“å…¥å¹´ä»£:");
             scanf_s("%s", Relics[index].Year, sizeof(Relics[num].Year));
             getchar();
-            printf("ÇëÊäÈë¼ò½é:");
+            printf("è¯·è¾“å…¥ç®€ä»‹:");
             scanf_s("%s", Relics[index].Introduction, sizeof(Relics[num].Introduction));
             getchar();
         }
-        printf("ÊÇ·ñ¼ÌĞø?(y/n)");
+        printf("æ˜¯å¦ç»§ç»­?(y/n)");
 
       
-        if (getchar() == 'n')
+        char ch = getchar();
+        while (ch != 'y' && ch != 'n')
+        {
+
+            printf("è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥(y/n):");
+            getchar();
+            ch = getchar();
+
+        }
+        if (ch == 'n')
         {
             break;
         }
     }
 }
-void deletee()//É¾³ıÎÄÎïĞÅÏ¢
+void deletee()//åˆ é™¤æ–‡ç‰©ä¿¡æ¯
 {
     int i;
     while (1)
     {
         char name[20];
         int index;
-        printf("ÇëÊäÈëÒªÉ¾³ıµÄÎÄÎïÃû³Æ:");
+        printf("è¯·è¾“å…¥è¦åˆ é™¤çš„æ–‡ç‰©åç§°:");
         scanf_s("%s", name, sizeof(name));
         getchar();
-        index = Reclic_SearchByName(name);   //µ÷ÓÃËÑ²éÎÄÎïÃû³Æ£¬¸ù¾İÆä·µ»ØÖµÈ·¶¨Î»ÖÃ 
+        index = Reclic_SearchByName(name);   //è°ƒç”¨æœæŸ¥æ–‡ç‰©åç§°ï¼Œæ ¹æ®å…¶è¿”å›å€¼ç¡®å®šä½ç½® 
         if (index == -1)
         {
-            printf("¸ÃÎÄÎï²»´æÔÚ!\n");
+            printf("è¯¥æ–‡ç‰©ä¸å­˜åœ¨!\n");
         }
         else
         {
-            printf("ÄãÒªÉ¾³ıµÄÎÄÎïĞÅÏ¢Îª:\n");
+            printf("ä½ è¦åˆ é™¤çš„æ–‡ç‰©ä¿¡æ¯ä¸º:\n");
             Reclics_DisplaySingle(index);
 
-            printf("ÊÇ·ñÕæµÄÒªÉ¾³ı?(y/n)");
+            printf("æ˜¯å¦çœŸçš„è¦åˆ é™¤?(y/n)");
             if (getchar() == 'y')
             {
                 for (i = index; i < num - 1; i++)
                 {
                     Copy(Relics, i, i + 1);
-                    //students[i]=students[i+1];    //°Ñºó±ßµÄ¶ÔÏó¶¼ÏòÇ°ÒÆ¶¯
+                    //students[i]=students[i+1];    //æŠŠåè¾¹çš„å¯¹è±¡éƒ½å‘å‰ç§»åŠ¨
                 }
                 num--;
             }
             getchar();
         }
-        printf("ÊÇ·ñ¼ÌĞø?(y/n)");
-        if (getchar() == 'n')
+        printf("æ˜¯å¦ç»§ç»­?(y/n)");
+        char ch = getchar();
+        while (ch != 'y' && ch != 'n')
+        {
+
+            printf("è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥(y/n):");
+            getchar();
+            ch = getchar();
+
+        }
+        if (ch == 'n')
         {
             break;
         }
@@ -170,34 +198,43 @@ void deletee()//É¾³ıÎÄÎïĞÅÏ¢
 
 
 
-void search()//²éÑ¯ÎÄÎïĞÅÏ¢
+void search()//æŸ¥è¯¢æ–‡ç‰©ä¿¡æ¯
 {
     while (1)
     {
         char name[20];
         int index;
-        printf("ÇëÊäÈëÒª²éÑ¯µÄÃû³Æ:");
+        printf("è¯·è¾“å…¥è¦æŸ¥è¯¢çš„åç§°:");
         scanf_s("%s", name, sizeof(name));
         getchar();
-        index = Reclic_SearchByName(name);   //µ÷ÓÃËÑ²énameº¯Êı£¬¸ù¾İÆä·µ»ØÖµÈ·¶¨Î»ÖÃ 
+        index = Reclic_SearchByName(name);   //è°ƒç”¨æœæŸ¥nameå‡½æ•°ï¼Œæ ¹æ®å…¶è¿”å›å€¼ç¡®å®šä½ç½® 
         if (index == -1)
         {
-            printf("²»´æÔÚ!\n");
+            printf("ä¸å­˜åœ¨!\n");
         }
         else
         {
-            printf("ÄãÒª²éÑ¯µÄÎÄÎïĞÅÏ¢Îª:\n");
+            printf("ä½ è¦æŸ¥è¯¢çš„æ–‡ç‰©ä¿¡æ¯ä¸º:\n");
             Reclics_DisplaySingle(index);
         }
-        printf("ÊÇ·ñ¼ÌĞø?(y/n)");
-        if (getchar() == 'n')
+        printf("æ˜¯å¦ç»§ç»­?(y/n)");
+        char ch = getchar();
+        while (ch != 'y' && ch != 'n')
+        {
+
+            printf("è¾“å…¥æœ‰è¯¯ï¼Œè¯·é‡æ–°è¾“å…¥(y/n):");
+            getchar();
+            ch = getchar();
+
+        }
+        if (ch == 'n')
         {
             break;
         }
     }
 }
 
-void sort()//¸ù¾İÃû³ÆÅÅĞò
+void sort()//æ ¹æ®åç§°æ’åº
 {
     int i, j;
    
@@ -205,7 +242,7 @@ void sort()//¸ù¾İÃû³ÆÅÅĞò
     {
         for (j = 1; j < num - i; j++)
         {
-            if (strcmp(Relics[j - 1].Name,Relics[j].Name)<=0)
+            if (strcmp(Relics[j - 1].Name,Relics[j].Name)>=0)
             {
 
                 Copy(Relics, num, j - 1);
@@ -213,16 +250,16 @@ void sort()//¸ù¾İÃû³ÆÅÅĞò
                 Copy(Relics, j, num);
                 //tmp=students[j-1];
                 //students[j-1]=students[j];
-                //students[j]=tmp;      //Ã°ÅİÅÅĞò 
+                //students[j]=tmp;      //å†’æ³¡æ’åº 
             }
         }
     }
     int a;
-    printf("%20s%30s%15s%30s\n", "Ãû³Æ", "ÏÖ²Ø²©Îï¹İ", "Äê´ú", "¼ò½é");
-    printf("-------------------------------------------------------------\n");
+    printf("%20s%30s%15s%30s\n", "åç§°", "ç°è—åšç‰©é¦†", "å¹´ä»£", "ç®€ä»‹");
+    printf("-----------------------------------------------------------------------------------------------------------\n");
     for (a = 0; a < num; a++)
     {
-        printf("%20s%30s%15s%30s\n", Relics[a].Name, Relics[a].Museum,
+        printf("%20s%30s%15s%30s\n\n", Relics[a].Name, Relics[a].Museum,
             Relics[a].Year, Relics[a].Introduction);
     }
 }
@@ -230,28 +267,49 @@ void sort()//¸ù¾İÃû³ÆÅÅĞò
 
 
 
-/*void Save()
+void Save()
 {
     FILE* fp;
-    fopen_s(&fp,"temp.txt", "w+");
-    fprintf(fp, "%d\n", num);
-    for (int i = 0; i < num; i++)
+    if (fopen_s(&fp, "test.txt", "w+") == 0)
     {
-        fprintf(fp, "%s %s %s %s\n", Relics[i].Name, Relics[i].Museum, Relics[i].Year, Relics[i].Introduction);
+        fprintf(fp, "%d\n", num);
+        for (int i = 0; i < num; i++)
+        {
+            fprintf(fp, "%s %s %s %s\n", Relics[i].Name, Relics[i].Museum, Relics[i].Year, Relics[i].Introduction);
+        }
+        fclose(fp);
     }
-    fclose(fp);
+    else
+    {
+        printf("error");
+    }
 }
 
 
 void Load()
 {
     FILE* fp;
-     fopen_s(&fp, "temp.txt", "r");
-    fscanf_s(fp, "%d", &num,sizeof(num));
-    for (int i = 0; i < num; i++)
+
+    if (fopen_s(&fp,"test.txt", "r") == 0)
     {
-        fscanf_s(fp, "%s %s %s %s\n", Relics[i].Name, Relics[i].Museum, Relics[i].Year, Relics[i].Introduction, sizeof(Relics[i].Name), sizeof(Relics[i].Museum), sizeof(Relics[i].Year), sizeof(Relics[i].Introduction));
+
+        fscanf_s(fp, "%d\n",&num);
+        
+
+        for (int i = 0; i < num; i++)
+        {
+
+            fscanf_s(fp, "%s %s %s %s\n", Relics[i].Name, sizeof(Relics[i].Name),
+                Relics[i].Museum, sizeof(Relics[i].Museum),
+                Relics[i].Year, sizeof(Relics[i].Year),
+                Relics[i].Introduction, sizeof(Relics[i].Introduction));
+
+        }
+        fclose(fp);
     }
-    fclose(fp);
+    else
+    {
+        printf("æ–‡ä»¶æ‰“å¼€å¤±è´¥");
+    }
+
 }
-*/

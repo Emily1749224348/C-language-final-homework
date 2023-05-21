@@ -4,12 +4,18 @@
 #include"relics.h"
 
 
+
+
 int main() {
+ 
     int i;
+    num=0;
 
     while (1) {
-       // Load();
-        printf("\t\t\t\t\t-------- 文物信息管理系统-------\n\n\n\n");     //菜单 
+
+        Load();
+
+        printf("\t\t\t\t-------- 文物信息管理系统-------\n\n\n\n");     //菜单 
         printf("\t\t\t\t\t1. 增加文物信息\n\n");
         printf("\t\t\t\t\t2. 修改文物信息\n\n");
         printf("\t\t\t\t\t3. 删除文物信息\n\n");
@@ -31,7 +37,7 @@ int main() {
         default:break;
         }
 
-       // Save();
+        Save();
     }
     return 0;
 }
