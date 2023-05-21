@@ -1,1 +1,34 @@
-﻿  文物管理系统.vcxproj -> C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\x64\Debug\文物管理系统.exe
+﻿  源.cpp
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(59,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(59,17): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(62,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(62,17): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(65,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(65,17): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(68,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(68,17): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(105,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(105,17): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(119,21): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(119,21): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(122,21): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(122,21): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(125,21): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(125,21): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(128,21): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(128,21): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(157,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(157,17): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(208,17): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(208,17): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(302,26): warning C4477: “fscanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(302,26): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(302,26): warning C4477: “fscanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 4 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(302,26): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(302,26): warning C4477: “fscanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 6 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(302,26): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(302,26): warning C4477: “fscanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 8 拥有了类型“size_t”
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\relics.h(302,26): message : 此参数用作缓冲区大小
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\源.cpp(17,9): warning C4101: “i”: 未引用的局部变量
+  文物管理系统.vcxproj -> D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\x64\Debug\文物管理系统.exe
+C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\amd64\Microsoft.Common.CurrentVersion.targets(5375,5): error MSB3541: Files 的值“<<<<<<< Updated upstream”无效。路径中具有非法字符。

@@ -1,2 +1,6 @@
 C:\Users\Lenovo\OneDrive\桌面\2222\C-language-final-homework\文物管理系统\x64\Debug\文物管理系统.exe
+<<<<<<< Updated upstream
 C:\Users\Lenovo\OneDrive\桌面\2222 - 副本\C-language-final-homework\文物管理系统\x64\Debug\文物管理系统.exe
+=======
+D:\Emily is coding\C语言大作业\C-language-final-homework\文物管理系统\x64\Debug\文物管理系统.exe
+>>>>>>> Stashed changes
